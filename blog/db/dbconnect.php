@@ -7,6 +7,8 @@
 	if(mysqli_connect_error()) {
 		echo "Connection failed";
 		printf("Error : %s",mysqli_connect_error());
+	}else{
+		printf("Connection Success");
 	}
 
 ?>
