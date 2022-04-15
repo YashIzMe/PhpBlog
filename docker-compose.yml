@@ -20,7 +20,6 @@ services:
       - ./blog/:/var/www/html/
   db:
     build: './mysql/'
-    restart: always
     networks:
       - backend
     environment:
