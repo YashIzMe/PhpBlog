@@ -10,7 +10,7 @@ services:
     build: './apache/'
     depends_on:
       - php
-      - db
+      - mysql
     networks:
       - frontend
       - backend
@@ -18,7 +18,7 @@ services:
       - "8080:80"
     volumes:
       - ./blog/:/var/www/html/
-  db:
+  mysql:
     build: './mysql/'
     networks:
       - backend
