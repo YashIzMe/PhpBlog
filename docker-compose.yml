@@ -2,6 +2,8 @@ version: "3.2"
 services:
   php:
     build: './php/'
+    networks:
+      - backend
     volumes:
       - ./blog/:/var/www/html/
   apache:
@@ -9,14 +11,22 @@ services:
     depends_on:
       - php
       - mysql
+    networks:
+      - frontend
+      - backend
     ports:
       - "8080:80"
     volumes:
       - ./blog/:/var/www/html/
   mysql:
     build: './mysql/'
+    networks:
+      - backend
     environment:
       - MYSQL_ROOT_PASSWORD=toor
       - MYSQL_DATABASE=blog
       - MYSQL_USER=rootUser
       - MYSQL_PASSWORD=toor
+networks:
+  frontend:
+  backend:
