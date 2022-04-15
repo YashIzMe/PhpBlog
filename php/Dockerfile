@@ -1,4 +1,4 @@
-FROM php:7.4.25-fpm-alpine3.14
+FROM php:fpm-alpine
 RUN apk update; \
     apk upgrade;
 RUN docker-php-ext-install mysqli
