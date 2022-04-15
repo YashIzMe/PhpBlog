@@ -25,6 +25,8 @@ services:
     environment:
       - MYSQL_ROOT_PASSWORD=toor
       - MYSQL_DATABASE=blog
+      - MYSQL_USER=MYSQL_USER
+      - MYSQL_PASSWORD=toor
 networks:
   frontend:
   backend:

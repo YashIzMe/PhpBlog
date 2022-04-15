@@ -1,7 +1,7 @@
 <?php
 
 /* Connection to database */
-	$conn =mysqli_connect("mysql","root","toor","blog",3306);
+	$conn =mysqli_connect("mysql","MYSQL_USER","toor","blog",3306);
 
 	/* Check connection */
 	if(mysqli_connect_error()) {
