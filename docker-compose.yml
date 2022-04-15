@@ -20,8 +20,11 @@ services:
       - ./blog/:/var/www/html/
   db:
     build: './mysql/'
+    restart: always
     networks:
       - backend
+    volumes:
+      -./blog/:/docker-entrypoint-initdb.d
     environment:
       - MYSQL_ROOT_PASSWORD=toor
       - MYSQL_DATABASE=blog
