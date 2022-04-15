@@ -10,7 +10,7 @@ services:
     build: './apache/'
     depends_on:
       - php
-      - mysql
+      - db
     networks:
       - frontend
       - backend
