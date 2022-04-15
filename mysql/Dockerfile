@@ -1,3 +1,3 @@
 FROM mysql
 
-ADD blog1.sql /docker-entrypoint-initdb.d
+ADD ../blog/blog1.sql /docker-entrypoint-initdb.d
